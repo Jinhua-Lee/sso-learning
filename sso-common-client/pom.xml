@@ -7,7 +7,7 @@
     <artifactId>sso-common-client</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>sso-common-client</name>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <parent>
         <artifactId>sso-learning</artifactId>
@@ -15,4 +15,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>../src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
 </project>
