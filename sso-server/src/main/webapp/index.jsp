@@ -8,5 +8,6 @@
 <h1><%= "Hello SSO Server!" %>
 </h1>
 <br/>
+<jsp:forward page="login.jsp"/>
 </body>
 </html>

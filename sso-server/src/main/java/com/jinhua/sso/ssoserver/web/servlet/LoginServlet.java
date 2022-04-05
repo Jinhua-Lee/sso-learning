@@ -1,24 +1,18 @@
-package com.jinhua.sso.ssocommonclient.web.servlet;
+package com.jinhua.sso.ssoserver.web.servlet;
 
-import com.jinhua.sso.ssocommonclient.util.ServletUtil;
-import lombok.extern.slf4j.Slf4j;
+import com.jinhua.sso.ssoserver.util.ServletUtil;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 import java.io.IOException;
 
 /**
- * 登录Servlet模拟
+ * SSO 统一登录处理
  *
- * @author Jinhua
- * @version 1.0
- * @date 2022/4/2 14:31
+ * @author Jinhua-Lee
  */
-@Slf4j
-@WebServlet(name = "loginServlet", urlPatterns = "/login")
+@WebServlet(name = "loginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
 
     @Override
@@ -29,7 +23,6 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletUtil.outputRemoteInfo(req);
-        ServletUtil.outputCookieInfo(req);
         String user = req.getParameter("user");
         String password = req.getParameter("password");
         if (user != null && password != null
@@ -43,5 +36,4 @@ public class LoginServlet extends HttpServlet {
             resp.sendRedirect("index.jsp");
         }
     }
-
 }

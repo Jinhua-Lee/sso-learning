@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSessionListener;
  * @version 1.0
  * @date 2022/4/2 18:22
  */
-public class SingleSignOutHttpSessionListener implements HttpSessionListener {
+public class MySingleSignOutHttpSessionListener implements HttpSessionListener {
     @Override
     public void sessionDestroyed(HttpSessionEvent se) {
         HttpSessionListener.super.sessionDestroyed(se);

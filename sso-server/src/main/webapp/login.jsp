@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Tmall 登录界面</title>
+    <title>SSO Server 统一登录界面</title>
 </head>
 <body>
-<h1>Tmall 登录界面</h1>
+<h1>SSO Server 统一登录界面</h1>
 <form action="login" method="post">
     <label>
         <input type="text" name="user"/>
